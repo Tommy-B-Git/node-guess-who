@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guess Who</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="fonts/MikadoV2.css">
+</head>
+
+<body>
+    <div>
+        <aside>
+            <img src="img/guess-who-logo.png" class="mainLogo">
+            <!-- <table class="flexTable">
+                <tr>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                    <td class="scoreboard">&nbsp;</td>
+                </tr>
+            </table> -->
+            <div class="scoreCard">
+                <p>Computer Remaining:<br><span class="headCount">18</span> of 18</p>
+                <!-- <p>Computer Remaining:<br><span class="headCount">18</span> of 18</p> -->
+                <!-- <p><span class="headCount">18</span>: of 18</p> -->
+            </div>
+            <div class="whoContainer">
+                <div class="whoContLeft">
+                    <p class="whoContainerTextHuman">Player 1</p>
+                    <img src="img/who-avatar.jpg" class="who-player">
+                </div>
+                <div class="whoContRight">
+                    <p class="whoContainerTextComp">Computer</p>
+                    <img src="img/who-avatar.jpg" class="who-computer">
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="start-button">Start</button>
+                <button class="reset-button">Reset</button>
+            </div>
+            <div class="question-container">
+                <p class="whiteHeavy"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i> Computer Features <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+</p>
+                <button type="submit" class="pickAFeatureBtn">Click to Confirm Choice <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+                <form class="askForm">
+                    <!-- <input type="submit" name="submit" value="Ask Question" class="pickAFeatureBtn"> -->
+                    <div class="select-style">
+                        <select class="featureList">
+                            <option class="charFeature" value="choose">Pick a feature...</option>
+                            <!-- <option class="charFeature" value="male">male</option> -->
+                            <option class="charFeature" value="female">female</option>
+                            <option class="charFeature" value="black hair">black hair</option>
+                            <option class="charFeature" value="white hair">white hair</option>
+                            <option class="charFeature" value="blonde hair">blonde hair</option>
+                            <option class="charFeature" value="red hair">red hair</option>
+                            <option class="charFeature" value="blue hair">blue hair</option>
+                            <option class="charFeature" value="purple hair">purple hair</option>
+                            <option class="charFeature" value="green eyes">green eyes</option>
+                            <option class="charFeature" value="black eyes">black eyes</option>
+                            <option class="charFeature" value="brown eyes">brown eyes</option>
+                            <option class="charFeature" value="blue eyes">blue eyes</option>
+                            <option class="charFeature" value="green eyes">green eyes</option>
+                            <option class="charFeature" value="bald">bald</option>
+                            <option class="charFeature" value="beard">beard</option>
+                            <option class="charFeature" value="moustache">moustache</option>
+                            <option class="charFeature" value="glasses">glasses</option>
+                            <option class="charFeature" value="earrings">earrings</option>
+                            <option class="charFeature" value="hat">hat</option>
+                            <option class="charFeature" value="brown skin">brown skin</option>
+                            <option class="charFeature" value="pale skin">pale skin</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </aside>
+        <!-- Start of main section -->
+        <main id="card">
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face1.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face2.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face3.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face4.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face5.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face6.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face7.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face8.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face9.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face10.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face11.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face12.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face13.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face14.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face15.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face16.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face17.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+            <div class="faces-container">
+                <img class="faces" data-flipimg="face18.jpg" src="">
+                <p class="char-names"></p>
+            </div>
+        </main>
+        <footer>
+            <div id="instructions">
+                <ul class="dialogBox">
+                    <li class="instructDialog dialogBoxShow">
+                        <h3>Instructions</h3>
+                        <p>Click the GREEN start button on the left to select your character.
+                            <br>Try to guess the Computers character by selecting an attribute from the 'Pick a Feature' menu and click the 'CONFIRM CHOICE' button. The computer will then take a guess at your character features.</p>
+                    </li>
+                    <li style="display:none;" class="computerDialog">
+                        <h3>Now it is the Computer's turn to guess</h3>
+                        <p></p>
+                        <div class="yesNoButtonsContainer">
+                            <button class="yesButton">Yes</button>
+                            <button class="noButton">No</button>
+                        </div>
+                    </li>
+                    <li style="display:none;" class="humanDialog">
+                        <h3>Its your turn to play again!</h3>
+                        <p>Pick another feature from the dropdown menu and click the 'Confirm Choice' button to continue.</p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/howler.js"></script>
+</body>
+
+</html>

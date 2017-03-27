@@ -1,0 +1,27 @@
+{
+  "name": "node-guess-who",
+  "version": "1.0.0",
+  "description": "MEAN/HTML5/Javascript guessing game",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tommy-B-Git/mean-guess-who.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Thomas Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tommy-B-Git/mean-guess-who/issues"
+  },
+  "homepage": "https://github.com/Tommy-B-Git/mean-guess-who#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongodb": "^2.2.24"
+  }
+}

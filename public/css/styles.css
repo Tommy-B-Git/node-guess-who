@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    background: red;
+    overflow: hidden;
+    font-family: 'MikadoBlack';
+    /* font-family: 'QueulatUni-Regular'; */
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility !important;
+    font-smoothing: antialiased !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body > div {
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 60vw;
+    min-height: 100vh;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.showIt {
+    display: flex;
+}
+
+.lightFont {
+    font-family: 'QueulatAlt-Regular';
+}
+
+.heavyFont {
+    font-family: 'QueulatAlt-Regular';
+}
+
+.whiteHeavy {
+    font-family: 'QueulatAlt-Regular';
+    color: #fff;
+    margin: 6px auto;
+    font-size: 80%;
+    letter-spacing: normal;
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    font-family: 'MikadoBlack';
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+
+/* =========== A S I D E__S E C T I O N ============= */
+
+body > div > aside {
+    background: #531CB3;
+    order: 1;
+    flex: 0 1 22%;
+    min-width: 11%;
+    height: auto;
+    padding: 2%;
+    margin: 0;
+}
+
+body > div > main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #3A015C;
+    order: 2;
+    flex: 1 2 70%;
+    min-width: 35%;
+    padding: 2%;
+    height: auto;
+}
+
+body > div > footer {
+    background: #F9DFB8;
+    order: 2;
+    flex: 0 1 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-basis: 100%;
+    font-size: 80%;
+    font-family: 'QueulatAlt-Regular';
+    letter-spacing: 0.013em;
+}
+
+.instructText {
+    overflow: hidden;
+}
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+form {
+    margin: 0;
+}
+
+.askForm {
+    width: 100%;
+    margin: 0 auto;
+}
+
+select {
+    text-align-last: center;
+    /* padding-right: 29px;
+    direction: rtl; */
+    font-family: 'MikadoBlack';
+}
+
+option {
+    font-family: 'MikadoBlack';
+}
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.select-style select {
+    background: transparent;
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 30px;
+    -webkit-appearance: none;
+    text-align: center;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.mainLogo {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.scoreCard {
+     /* REMOVED BG IMAGE BELOW AS GENERATED IN JS */
+    background: url(../img/neon.png) center center no-repeat;
+    background-size: contain;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 82px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.scoreCard > p {
+    font-family: 'MikadoBlack';
+    font-size: 77%;
+    line-height: 1.2;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+}
+
+.scoreCard > p > span {
+    font-family: 'MikadoBlack';
+    /* font-size: 80%; */
+    color: white;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.flexTable {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+td {
+    margin: 10px;
+}
+
+.whoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.whoContLeft{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.whoContRight{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.whoContainerTextHuman {
+    color: #fff;
+    text-align: center;
+}
+
+.whoContainerTextComp {
+    color: #fff;
+    text-align: center;
+}
+
+.who {
+    margin: 6px;
+}
+
+img.who-player {
+    width: 100%;
+    height: auto;
+    margin: 4px;
+    padding: 6px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+img.who-computer {
+    width: 100%;
+    height: auto;
+    margin: 4px;
+    padding: 6px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.start-button {
+    background-color: #3BBBAF;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    margin-right: 6px;
+    transition: all linear 0.4s;
+}
+
+.reset-button {
+    /* background-color: #FF8A00; */
+    background-color: #EA305B;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    margin-left: 6px;
+    transition: all linear 0.4s;
+}
+
+.start-button:hover,
+.reset-button:hover,
+.pickAFeatureBtn:hover {
+    background-color: #dfd0f8;
+    color: #000;
+}
+
+.pickAFeatureBtn {
+    background-color: #250637;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    transition: all linear 0.3s;
+}
+
+.okButton {
+    background-color: #531CB3;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+}
+
+.noButton {
+    background-color: #EA305B;
+    color: white;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.yesButton {
+    background-color: #3BBBAF;
+    color: white;
+    padding: 6px 18px;
+    border: none;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+.yesNoButtonsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*  ========== M A I N__S E C T I O N =========== */
+
+.faces-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    width: 16%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.faces {
+    /* background: white; */
+    border: 4px solid #fff;
+    max-width: 86%;
+    margin: 2px auto;
+    /* box-sizing: content-box; */
+}
+
+.char-names {
+    color: #ffecb0;
+    align-self: center;
+    max-width: 90%;
+    padding: 2px;
+    margin: 0 auto;
+}
+
+.charFeature {
+    width: 100%;
+}
+
+
+/* ========== F O O T E R__S E C T I O N =========== */
+
+
+/* footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 14vh;
+    padding: 8px 0px;
+} */
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0 2% 0;
+}
+
+.dialogBox {
+    height: 100%;
+}
+
+.dialogBox > li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.dialogBoxShow {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dialogBoxHide {
+    display: none;
+}
+
+
+/* .instructOverflow {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#my-slider {
+    padding: 10px 0px;
+} */
