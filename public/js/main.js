@@ -31,6 +31,9 @@ $(document).ready(function() {
 
 // Get JSON and callback so JSON can be stored globally - Connect to MongoDB
 $.getJSON('https://api.mlab.com/api/1/databases/guess-who/collections/characters?apiKey=uqMRuWlxeuNOKkDKdZhq-ONxMlrPvs5G', callback);
+// Below line cannot connect directly from a browser. You need a server side component.
+//$.getJSON('mongodb://localhost:27017/guessWho', callback);
+
 // Populate faces and names in HTML
 function callback(data) {
     /*optional stuff to do after success  */
