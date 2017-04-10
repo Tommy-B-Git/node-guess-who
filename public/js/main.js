@@ -12,19 +12,17 @@ var allHumanNames = [];
 // allTheCharacters.length = 18
 // questions.length = 15
 
+$(document).ready(function(event) {
+    newGame();
+    theFlasher();
+    $('#card').fadeIn(600).css('display', 'flex');
+});
+
 var newGame = function() {
     $('.start-button').one('click', function(event) {
         turn == 0;
-        //turn == 1;
     });
 };
-
-$(document).ready(function() {
-    newGame();
-    theFlasher();
-    $('.faces-container').hide().fadeIn('slow');
-
-});
 
 
 
@@ -65,7 +63,7 @@ $('.start-button').on('click', function() {
     $('.dialogBox').find('h3').empty();
     $('.dialogBox').find('p').empty();
     $('.instructDialog').show().find('h3').text("PLAYER 1 - YOUR TURN TO PLAY");
-    $('.instructDialog').show().find('p').text("Now pick an feature from the dropdown menu on the left");
+    $('.instructDialog').show().find('p').text("Make your choice from 'PICK A FEATURE' menu on the left");
     var sound = new Howl({
         src: ['sounds/squiggle.mp3']
     });
@@ -74,7 +72,7 @@ $('.start-button').on('click', function() {
 
 // Reset button click event
 $('.reset-button').on('click', function() {
-    window.location.reload()
+    window.location.reload();
 });
 
 // Pick random  H U M A N  player
@@ -170,6 +168,11 @@ function humanTurn() {
     if (theComputer[0][Feature] === true) {
         //remove all with false feature because it matches and we don't want anyone with it
         allNames = allTheCharactersComp.filter(function(player, i) {
+            $('.dialogBox').find('p')
+                .text("YES! " + Feature + " is right! Remove non matching characters and click button to continue.")
+                .append('<br><button class="okButton">CONTINUE</button>');
+            $('.dialogBox').find('h3')
+                .text("PLAYER 1");
             return allTheCharactersComp[i][Feature] === false;
         });
 
@@ -179,6 +182,11 @@ function humanTurn() {
     } else {
         //remove all with true feature because it doesn't match
         allNames = allTheCharactersComp.filter(function(player, i) {
+            $('.dialogBox').find('p')
+                .text("NO! " + Feature + " is wrong! Remove non matching characters and click button to continue.")
+                .append('<br><button class="okButton">CONTINUE</button>');
+            $('.dialogBox').find('h3')
+                .text("PLAYER 1");
             return allTheCharactersComp[i][Feature] === true;
         });
 
@@ -199,12 +207,13 @@ function humanTurn() {
             nameArray.push(allNames[i].name);
         }
 
-        var nameString = nameArray.toString();
-        $('.dialogBox').find('p')
-            .text("Click on " + nameString + " to remove them from the game! Then click button to continue.")
-            .append('<br><button class="okButton">CONTINUE</button>');
-        $('.dialogBox').find('h3')
-            .text("PLAYER 1");
+        // var nameString = nameArray.toString();
+        // $('.dialogBox').find('p')
+        //     .text("Click on " + nameString + " to remove them from the game! Then click button to continue.")
+        //     .append('<br><button class="okButton">CONTINUE</button>');
+        // $('.dialogBox').find('h3')
+        //     .text("PLAYER 1");
+
     }
 
     //remove
@@ -261,6 +270,7 @@ function computerTurn() {
     //remove
     allTheCharacters = remainingHumanNames;
 
+    // Update scoeboard
     $('.headCount').text(allTheCharacters.length);
 
     //check for all allTheCharactersComp.length === 0
@@ -273,6 +283,12 @@ function computerTurn() {
             .show()
             .find('p').text("Your character is " + finalHumanName + " - YOU LOSE");
         $('.yesNoButtonsContainer').hide();
+        // Play fail Sound
+        var sound = new Howl({
+            src: ['sounds/fail.mp3']
+        });
+        sound.play();
+
         return;
     }
 
@@ -294,6 +310,12 @@ function setUpComputersTurnClick() {
         // questions comes from questions.js file
 
         if (allTheCharactersComp.length === 1) {
+            // Play winner sound
+            var sound = new Howl({
+                src: ['sounds/success.mp3']
+            });
+            sound.play();
+
             //display to screen winner
             finalComputerName = theComputer[0]['name'];
             finalComputerImage = theComputer[0]['image'];
@@ -332,7 +354,7 @@ function setUpHumanTurnClick() {
     console.log(theQuestion);
     //alert('Button clicked!');
     $('.dialogBox').find('p').empty();
-    $('.instructDialog').show().find('p').text("Now pick an attribute from the dropdown menu");
+    $('.instructDialog').show().find('p').text("Make your choice from 'PICK A FEATURE' menu on the left");
     $('.computerDialog').hide();
     turn = 0;
 };

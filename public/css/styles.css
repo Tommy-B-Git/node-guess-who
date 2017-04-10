@@ -7,7 +7,7 @@ body {
     margin: 0;
     height: 100vh;
     width: 100%;
-    background: red;
+    background: #3A015C;
     overflow: hidden;
     font-family: 'MikadoBlack';
     /* font-family: 'QueulatUni-Regular'; */
@@ -350,6 +350,10 @@ img.who-computer {
 
 
 /*  ========== M A I N__S E C T I O N =========== */
+
+#card{
+    display: none;
+}
 
 .faces-container {
     display: flex;
