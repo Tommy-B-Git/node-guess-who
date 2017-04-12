@@ -148,8 +148,9 @@ function resetPlayer() {
 function grabInputValue() {
     // click event on select submit
     $(".pickAFeatureBtn").on('click', function(e) {
+        var mySelect = $('.featureList');
+        var myOption = $('.charFeature');
         e.preventDefault();
-
         humanTurn();
         //setUpHumanTurnClick();
         console.log(turn);
@@ -165,11 +166,12 @@ function humanTurn() {
 
     //check if computerplayer has feature
     var Feature = $('.featureList').val();
+    $_this = Feature;
     if (theComputer[0][Feature] === true) {
         //remove all with false feature because it matches and we don't want anyone with it
         allNames = allTheCharactersComp.filter(function(player, i) {
             $('.dialogBox').find('p')
-                .text("YES! " + Feature + " is right! Remove non matching characters and click button to continue.")
+                .text("YES! " + Feature + " is right! Remove all characters without " + Feature + " and click button to continue.")
                 .append('<br><button class="okButton">CONTINUE</button>');
             $('.dialogBox').find('h3')
                 .text("PLAYER 1");
@@ -183,7 +185,7 @@ function humanTurn() {
         //remove all with true feature because it doesn't match
         allNames = allTheCharactersComp.filter(function(player, i) {
             $('.dialogBox').find('p')
-                .text("NO! " + Feature + " is wrong! Remove non matching characters and click button to continue.")
+                .text("NO! " + Feature + " is wrong! Remove all characters with " + Feature + " and click button to continue.")
                 .append('<br><button class="okButton">CONTINUE</button>');
             $('.dialogBox').find('h3')
                 .text("PLAYER 1");
