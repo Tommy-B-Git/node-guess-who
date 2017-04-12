@@ -6,7 +6,7 @@ var app = express();
 // Get node module to handle static file paths
 var path = require('path');
 
-// Grab te routes folder
+// Grab the routes folder
 var routes = require('./api/routes');
 
 // application variable 'port' set to 3000
